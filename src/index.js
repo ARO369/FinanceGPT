@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar.js";
 import Error from "./pages/Error.js";
 import Home from "./pages/Home.js";
 import Stocks from "./pages/Stocks.js";
+import StockDetail from "./pages/StockDetails.js";
 import FinanceNews from "./pages/FinanceNews.js";
 import Analysis from "./pages/Analysis.js";
 import Askai from "./pages/Askai.js";
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/stocks",
         element: <Stocks />,
+      },
+      {
+        path: "/stocks/detail/:stockId",
+        element: <StockDetail />
       },
       {
         path: "/finance-news",
