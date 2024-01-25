@@ -9,11 +9,11 @@ const Stocks = () => {
   const fetchData = async (company) => {
     const url = `https://real-time-finance-data.p.rapidapi.com/search?query=${company}&language=en`;
     const options = {
-      method: "GET",
+      method: 'GET',
       headers: {
-        "X-RapidAPI-Key": "e56f5cded7msh5936917bf4637a1p115fbbjsn6564721aabbe",
-        "X-RapidAPI-Host": "real-time-finance-data.p.rapidapi.com",
-      },
+        'X-RapidAPI-Key': '0a3a2f8e35msh47b9577e2eb25b6p1e7cd6jsnba3aa712850e',
+        'X-RapidAPI-Host': 'real-time-finance-data.p.rapidapi.com'
+      }
     };
     try {
       const response = await fetch(url, options);
