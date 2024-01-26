@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar.js";
 import Error from "./pages/Error.js";
 import Home from "./pages/Home.js";
 import Stocks from "./pages/Stocks.js";
@@ -15,7 +14,6 @@ import Calculator from "./pages/Calculator.js";
 const MainPage = () => {
   return (
     <div className="flex flex-row">
-      <Navbar />
       <Outlet />
     </div>
   );
@@ -37,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/stocks/detail/:stockId",
-        element: <StockDetail />
+        element: <StockDetail />,
       },
       {
         path: "/finance-news",

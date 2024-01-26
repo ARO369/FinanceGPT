@@ -9,11 +9,11 @@ const Stocks = () => {
   const fetchData = async (company) => {
     const url = `https://real-time-finance-data.p.rapidapi.com/search?query=${company}&language=en`;
     const options = {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'X-RapidAPI-Key': '0a3a2f8e35msh47b9577e2eb25b6p1e7cd6jsnba3aa712850e',
-        'X-RapidAPI-Host': 'real-time-finance-data.p.rapidapi.com'
-      }
+        "X-RapidAPI-Key": process.env.REACT_APP_STOCKS_API_KEY,
+        "X-RapidAPI-Host": "real-time-finance-data.p.rapidapi.com",
+      },
     };
     try {
       const response = await fetch(url, options);
@@ -36,9 +36,14 @@ const Stocks = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-green-600 w-10/12 h-screen">
-      <div className="my-4 text-white text-2xl">Stocks</div>
-      <div>
+    <div className="flex flex-col items-center bg-green-600 justify-center  w-full h-screen">
+      <div className="fixed top-4 text-white text-2xl">Stocks</div>
+      <Link to="/">
+        <div className="fixed top-4 p-4 bg-gray-800 text-white left-4">
+          <div>Back</div>
+        </div>
+      </Link>
+      <div className="fixed top-20">
         <input
           placeholder="Search Stocks..."
           className="border border-black p-2 mb-2"
@@ -52,7 +57,7 @@ const Stocks = () => {
           Search
         </button>
       </div>
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="flex flex-wrap items-center justify-center w-10/12">
         {stockData ? (
           stockData.map((stock) => (
             <Link to={"/stocks/detail/" + stock.symbol} key={stock.symbol}>

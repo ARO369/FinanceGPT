@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NewsCard from "../components/NewsCard.js";
+import { Link } from "react-router-dom";
 
 const FinanceNews = () => {
   const [news, setNews] = useState([]);
@@ -9,7 +10,7 @@ const FinanceNews = () => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "0a3a2f8e35msh47b9577e2eb25b6p1e7cd6jsnba3aa712850e",
+        "X-RapidAPI-Key": process.env.REACT_APP_STOCKS_API_KEY,
         "X-RapidAPI-Host": "real-time-finance-data.p.rapidapi.com",
       },
     };
@@ -35,8 +36,13 @@ const FinanceNews = () => {
   };
 
   return (
-    <div className="bg-red-400 w-10/12 flex flex-col items-center">
+    <div className="flex w-full flex-col items-center justify-center">
       <div className="my-8 text-2xl">Finance News</div>
+      <Link to="/">
+        <div className="fixed top-4 p-4 bg-gray-800 text-white left-4">
+          <div>Back</div>
+        </div>
+      </Link>
       <div>
         <input
           placeholder="Search News..."
@@ -53,7 +59,7 @@ const FinanceNews = () => {
           {news.map((item, index) => (
             <NewsCard
               key={index}
-              image={item.article_photo_url}
+              newsImage={item.article_photo_url}
               title={item.article_title}
               source={item.source}
               more={item.article_url}
