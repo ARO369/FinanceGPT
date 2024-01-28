@@ -9,7 +9,6 @@ import StockDetail from "./pages/StockDetails.js";
 import FinanceNews from "./pages/FinanceNews.js";
 import Analysis from "./pages/Analysis.js";
 import Askai from "./pages/Askai.js";
-import Calculator from "./pages/Calculator.js";
 
 const MainPage = () => {
   return (
@@ -48,10 +47,6 @@ const router = createBrowserRouter([
       {
         path: "/ask-ai",
         element: <Askai />,
-      },
-      {
-        path: "/calculator",
-        element: <Calculator />,
       },
     ],
   },
