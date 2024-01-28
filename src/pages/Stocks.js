@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import StockCard from "../components/StockCard.js";
 import { Link } from "react-router-dom";
+import loader from "../assets/loader.svg";
 
 const Stocks = () => {
   const [stockData, setStockData] = useState([]);
@@ -35,30 +36,35 @@ const Stocks = () => {
     fetchData(inputData);
   };
 
+  const handleEnter = (e) => {
+    if (e.key === "Enter") fetchData(inputData);
+  };
+
   return (
-    <div className="flex flex-col items-center bg-green-600 justify-center  w-full h-screen">
-      <div className="fixed top-4 text-white text-2xl">Stocks</div>
+    <div className="flex flex-col items-center justify-center w-full h-full">
+      <div className=" text-white text-2xl head_text mb-10">Stocks</div>
       <Link to="/">
         <div className="fixed top-4 p-4 bg-gray-800 text-white left-4">
           <div>Back</div>
         </div>
       </Link>
-      <div className="fixed top-20">
+      <div className="">
         <input
           placeholder="Search Stocks..."
-          className="border border-black p-2 mb-2"
+          className="text-black border border-black p-2 mb-2 border-none rounded-l-2xl w-[25rem]"
           value={inputData}
           onChange={(e) => setInputData(e.target.value)}
+          onKeyDown={handleEnter}
         />
         <button
-          className="bg-blue-500 p-2 border border-black"
+          className="bg-white text-black font-bold border-r rounded-r-2xl p-2 border border-black"
           onClick={handleClick}
         >
           Search
         </button>
       </div>
-      <div className="flex flex-wrap items-center justify-center w-10/12">
-        {stockData ? (
+      <div className="flex flex-col items-center justify-center w-10/12 mt-6">
+        {stockData.length !== 0 ? (
           stockData.map((stock) => (
             <Link to={"/stocks/detail/" + stock.symbol} key={stock.symbol}>
               <StockCard
@@ -75,7 +81,9 @@ const Stocks = () => {
             </Link>
           ))
         ) : (
-          <div>Loading...</div>
+          <div className="flex w-full justify-center items-center mt-40">
+            <img src={loader} className="h-20" style={{fill: "white"}}/>
+          </div>
         )}
       </div>
     </div>

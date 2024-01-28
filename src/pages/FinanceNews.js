@@ -18,7 +18,7 @@ const FinanceNews = () => {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      // console.log(result.data.news);
+      console.log(result.data.news);
 
       setNews(result.data.news);
     } catch (error) {
