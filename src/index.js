@@ -9,11 +9,14 @@ import StockDetail from "./pages/StockDetails.js";
 import FinanceNews from "./pages/FinanceNews.js";
 import Analysis from "./pages/Analysis.js";
 import Askai from "./pages/Askai.js";
+import { ThemeProvider } from "./components/ThemeProvider.js";
 
 const MainPage = () => {
   return (
     <div className="flex flex-row">
-      <Outlet />
+      <ThemeProvider>
+        <Outlet />
+      </ThemeProvider>
     </div>
   );
 };
