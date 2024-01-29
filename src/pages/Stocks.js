@@ -43,19 +43,19 @@ const Stocks = () => {
 
   return (
     <div className={`${darkMode && "dark"}`}>
-      <div className="flex flex-col items-center justify-center w-screen h-full bg-[#FFF5EE;] text-black  dark:bg-[#001220;] dark:text-white">
+      <div className="flex flex-col items-center justify-center w-full h-full bg-[#FFF5EE;] text-black  dark:bg-[#001220;] dark:text-white">
         <div className="  text-2xl head_text mb-10 text-black dark:text-white">
           Stocks
         </div>
         <Link to="/">
-          <div className="fixed top-4 p-4 bg-gray-800 text-white left-4">
+          <div className="fixed top-4 p-4 bg-gray-800 text-white left-4 z-10">
             <div>Back</div>
           </div>
         </Link>
-        <div className="">
+        <div className="w-[100%] flex justify-center items-center">
           <input
             placeholder="Search Stocks..."
-            className="text-black border border-black p-2 mb-2 border-none rounded-l-2xl w-[25rem]"
+            className="text-black border border-black p-2 border-none rounded-l-2xl w-[30%]"
             value={inputData}
             onChange={(e) => setInputData(e.target.value)}
             onKeyDown={handleEnter}
@@ -86,7 +86,7 @@ const Stocks = () => {
             ))
           ) : (
             <div className="flex w-full justify-center items-center mt-40">
-              <img src={loader} className="h-20" style={{ fill: "white" }} />
+              <img src={loader} alt="loader" className="h-20" style={{ fill: "white" }} />
             </div>
           )}
         </div>

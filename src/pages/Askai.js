@@ -34,9 +34,9 @@ const Askai = () => {
   };
   return (
     <div className={`${darkMode && "dark"}`}>
-      <div className="h-screen bg-[#FFF5EE;] text-black  dark:bg-[#001220;] dark:text-white">
-        <div className="flex w-screen justify-center items-center">
-          <div className=" text-black text-2xl head_text mb-10 dark:text-white">
+      <div className="h-full bg-[#FFF5EE;] text-black  dark:bg-[#001220;] dark:text-white">
+        <div className="flex w-screen justify-center items-center ">
+          <div className=" text-black text-2xl head_text mb-10 dark:text-white ask-ai">
             Aks GPT
           </div>
         </div>
@@ -46,7 +46,7 @@ const Askai = () => {
           </div>
         </Link>
         <div className="p-2 flex flex-col items-center justify-center">
-          <div className="p-4 mb-16 w-[50%]">
+          <div className="p-4  w-[50%] h-[70vh] ai-resp overflow-auto">
             {gptResponse.length !== 0 ? (
               gptResponse
             ) : (
@@ -56,23 +56,25 @@ const Askai = () => {
             )}
           </div>
 
-          <div className="fixed bottom-8">
+          <div className="flex flex-col justify-center items-center mb-[3rem]">
             <div className="flex justify-center items-center">
               <div>Enter Prompt and wait for 10sec</div>
             </div>
-            <input
-              placeholder="Search here..."
-              className="bg-black text-white border p-2 rounded-l-2xl w-[25rem] dark:bg-white dark:text-black"
-              value={inputPrompt}
-              onChange={(e) => setInputPrompt(e.target.value)}
-              onKeyDown={handleEnter}
-            />
-            <button
-              className="bg-white text-black font-bold border-r rounded-r-2xl p-2 border border-black"
-              onClick={handlePrompt}
-            >
-              Search
-            </button>
+            <div className="flex justify-center">
+              <input
+                placeholder="Search here..."
+                className="bg-black text-white border p-2 rounded-l-2xl w-[25rem] dark:bg-white dark:text-black url-input"
+                value={inputPrompt}
+                onChange={(e) => setInputPrompt(e.target.value)}
+                onKeyDown={handleEnter}
+              />
+              <button
+                className="bg-white text-black font-bold border-r rounded-r-2xl p-2 border border-black"
+                onClick={handlePrompt}
+              >
+                Search
+              </button>
+            </div>
           </div>
         </div>
       </div>

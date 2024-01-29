@@ -66,15 +66,17 @@ const StockDetails = () => {
   }, []);
   return (
     <div className={`${darkMode && "dark"}`}>
-      <div className="h-screen w-screen flex flex-col justify-center items-center p-2 bg-[#FFF5EE;] text-black  dark:bg-[#001220;] dark:text-white">
-        <div className="text-2xl head_text mb-10">Stock Details</div>
+      <div className="h-full w-full flex flex-col justify-center items-center p-2 bg-[#FFF5EE;] text-black  dark:bg-[#001220;] dark:text-white">
+        <div className="text-2xl head_text mb-10 stock-detail-title">
+          Stock Details
+        </div>
         <Link to="/stocks">
           <div className="fixed top-4 p-4 bg-gray-800 text-white left-4">
             <div>Back</div>
           </div>
         </Link>
         <div className="w-10/12 mt-6 flex justify-center flex-col">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center name-price">
             {details.name ? (
               <div className="text-5xl pb-8">{details.name}</div>
             ) : (
@@ -109,10 +111,10 @@ const StockDetails = () => {
             ) : null}
           </div>
 
-          <div className="flex justify-between items-center mt-16">
+          <div className="flex justify-between items-center mt-16 mb-16 wiki-visit">
             {details.wikipedia_url ? (
               <Link to={details.wikipedia_url}>
-                <div className="home-card p-4 font-bold text-2xl">
+                <div className="home-card p-4 font-bold text-2xl mb-4">
                   Wikipedia
                 </div>
               </Link>

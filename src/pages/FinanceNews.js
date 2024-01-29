@@ -45,21 +45,21 @@ const FinanceNews = () => {
   return (
     <div className={`${darkMode && "dark"}`}>
       <div className="flex w-full flex-col items-center justify-center bg-[#FFF5EE;] text-black  dark:bg-[#001220;] dark:text-white">
-        <div className="flex w-screen justify-center items-center">
+        <div className="flex w-screen justify-center items-center finance-news">
           <div className=" text-black text-2xl head_text mb-10 dark:text-white">
             Finance News
           </div>
         </div>
         <Link to="/">
-          <div className="fixed top-4 p-4 bg-gray-800 text-white left-4">
+          <div className="fixed top-4 p-4 bg-gray-800 text-white left-4 z-10">
             <div>Back</div>
           </div>
         </Link>
-        <div>
+        <div className="w-full flex justify-center items-center">
           <input
             placeholder="Search News..."
             // className="p-2 border border-black"
-            className="text-black border border-black p-2 mb-2 border-none rounded-l-2xl w-[25rem]"
+            className="text-black border border-black p-2 border-none rounded-l-2xl w-[60%]"
             value={inputNews}
             onChange={(e) => setInputNews(e.target.value)}
             onKeyDown={handleEnter}
@@ -71,29 +71,23 @@ const FinanceNews = () => {
             Search
           </button>
         </div>
-        <div>
-          <div>
-            <div className="w-100% flex flex-row flex-wrap justify-center items-center">
-              {news.length !== 0 ? (
-                news.map((item, index) => (
-                  <NewsCard
-                    key={index}
-                    newsImage={item.article_photo_url}
-                    title={item.article_title}
-                    source={item.source}
-                    more={item.article_url}
-                  />
-                ))
-              ) : (
-                <div className="flex w-full justify-center items-center mt-40">
-                  <img
-                    src={loader}
-                    className="h-20"
-                    style={{ fill: "white" }}
-                  />
-                </div>
-              )}
-            </div>
+        <div className="flex justify-center items-center">
+          <div className="flex-wrap justify-center items-center flex flex-row mt-4">
+            {news.length !== 0 ? (
+              news.map((item, index) => (
+                <NewsCard
+                  key={index}
+                  newsImage={item.article_photo_url}
+                  title={item.article_title}
+                  source={item.source}
+                  more={item.article_url}
+                />
+              ))
+            ) : (
+              <div className="flex w-full justify-center items-center mt-40">
+                <img src={loader} className="h-20" style={{ fill: "white" }} />
+              </div>
+            )}
           </div>
         </div>
       </div>

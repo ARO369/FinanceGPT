@@ -15,10 +15,10 @@ const StockCard = ({
   const { darkMode } = useTheme();
   return (
     <div className={`${darkMode && "dark"}`}>
-      <div className="w-[45rem] home-card pb-8 px-4 m-4 cursor-pointer">
+      <div className="w-[45rem] home-card pb-8 px-4 m-4 cursor-pointer stock-card">
         <div className="flex justify-between items-center ">
-          <div className="text-4xl my-4">{name}</div>
-          <div>Price: ${price}</div>
+          <div className="text-4xl my-4 overflow-hidden">{name}</div>
+          <div> ${price}</div>
         </div>
         <div className="my-2">Change: {change}</div>
         <div className="my-2">Previous Close :{previous_close}</div>
@@ -29,7 +29,7 @@ const StockCard = ({
           <div>Type: {type}</div>
         </div>
         <img
-          className="absolute bottom-0 right-28 h-[10rem] opacity-30"
+          className="absolute bottom-0 right-28 h-[10rem] opacity-30 stock-gif"
           src={stock_gif}
         />
       </div>

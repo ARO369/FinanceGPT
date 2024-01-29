@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from "../components/ThemeProvider.js";
-// import loader from "../assets/loader.svg";
 import wheel_gif from "../assets/wheel_gif.gif";
 
 const Analysis = () => {
@@ -15,7 +14,7 @@ const Analysis = () => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": process.env.REACT_APP_SUMMERIZER_API_KEY,
+        "X-RapidAPI-Key": "e56f5cded7msh5936917bf4637a1p115fbbjsn6564721aabbe",
         "X-RapidAPI-Host": "article-extractor-and-summarizer.p.rapidapi.com",
       },
     };
@@ -23,7 +22,7 @@ const Analysis = () => {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      // console.log(result);
+      console.log(result);
       const dataURL = result.url;
       // console.log(dataURL);
       fetchSummery(dataURL);
@@ -37,7 +36,7 @@ const Analysis = () => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": process.env.REACT_APP_SUMMERIZER_API_KEY,
+        "X-RapidAPI-Key": "e56f5cded7msh5936917bf4637a1p115fbbjsn6564721aabbe",
         "X-RapidAPI-Host": "article-extractor-and-summarizer.p.rapidapi.com",
       },
     };
@@ -45,7 +44,7 @@ const Analysis = () => {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      // console.log(result);
+      console.log(result);
       // console.log(result.summary);
       setSummery(result.summary);
     } catch (error) {
@@ -65,15 +64,15 @@ const Analysis = () => {
         </div>
       </Link>
       <div className="bg-[#FFF5EE;] text-black  dark:bg-[#001220;] dark:text-white">
-        <div className="flex w-screen justify-center items-center">
+        <div className="flex w-screen justify-center items-center rapid-abstract">
           <div className="text-black text-2xl head_text mb-10 dark:text-white">
             Rapid Abstract
           </div>
         </div>
 
         <div className="h-full w-full flex flex-col items-center justify-center">
-          <div className="w-[50%] h-[60vh] mt-[5rem] overflow-auto">
-            {summery.length !== 0 ? (
+          <div className="w-[50%] h-[60vh] mt-[5rem] overflow-auto windmill">
+            {summery ? (
               summery
             ) : (
               <div className="flex justify-center items-center">
@@ -85,7 +84,7 @@ const Analysis = () => {
           <div>Enter URL and wait for 10 sec.</div>
           <div className=" flex justify-center items-center w-full mb-[3rem]">
             <input
-              className="bg-black text-white border p-2 rounded-l-2xl w-[25rem] dark:bg-white dark:text-black"
+              className="bg-black text-white border p-2 rounded-l-2xl w-[25rem] dark:bg-white dark:text-black url-input"
               placeholder="URL"
               value={inputURL}
               onChange={(e) => setInputURL(e.target.value)}

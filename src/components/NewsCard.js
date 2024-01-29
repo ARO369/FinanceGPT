@@ -6,9 +6,9 @@ const NewsCard = ({ newsImage, title, source, more }) => {
   const { darkMode } = useTheme();
   return (
     <div className={`${darkMode && "dark"}`}>
-      <div className="w-[20rem] home-card pb-8 px-4 m-4 cursor-pointer">
+      <div className="w-[20rem] home-card pb-8 px-4 m-4 cursor-pointer news-cards">
         <div className="p-2 flex justify-center items-center w-full">
-          <img src={newsImage} alt="image" />
+          <img src={newsImage} alt="news_image" />
         </div>
         <div className="p-2">{title}</div>
         <div className="p-2">Source: {source}</div>

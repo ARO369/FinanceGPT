@@ -13,7 +13,7 @@ import { ThemeProvider } from "./components/ThemeProvider.js";
 
 const MainPage = () => {
   return (
-    <div className="flex flex-row">
+    <div className="">
       <ThemeProvider>
         <Outlet />
       </ThemeProvider>

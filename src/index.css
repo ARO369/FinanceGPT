@@ -63,3 +63,90 @@ a {
 .home-card:hover {
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 971px) {
+  .stock-card {
+    width: 100%;
+    overflow: hidden;
+  }
+  .stock-gif {
+    display: none;
+  }
+}
+@media screen and (max-width: 683px) {
+  .stock-detail-title {
+    margin-top: 5rem;
+  }
+
+  .name-price {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .finance-news {
+    margin-top: 3rem;
+  }
+
+  .ask-ai {
+    margin-top: 5rem;
+  }
+
+  .rapid-abstract {
+    padding-top: 3rem;
+  }
+
+  .windmill {
+    margin: 0rem;
+    width: 90%;
+    
+  }
+
+  .ai-resp{
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 574px) {
+  .cards {
+    width: 90%;
+    overflow: hidden;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .stock-card {
+    margin-left: 0;
+  }
+
+  .url-input {
+    width: 60%;
+  }
+
+  .ai-resp {
+    width: 90%;
+    margin-bottom: 7rem;
+  }
+
+  .ask-ai{
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 466px) {
+  .wiki-visit {
+    flex-direction: column;
+  }
+
+  .news-cards {
+    width: 80%;
+  }
+
+  .ask-ai{
+    margin-top: 4rem;
+  }
+
+  .ai-resp {
+    margin-bottom: 2rem;
+  }
+}
