@@ -22,10 +22,13 @@ const Analysis = () => {
     try {
       const response = await fetch(url, options);
       const result = await response.json();
-      console.log(result);
-      const dataURL = result.url;
-      // console.log(dataURL);
-      fetchSummery(dataURL);
+      // console.log(result);
+      const dataURL = result.url || result.error;
+      if (dataURL === result.url) {
+        fetchSummery(dataURL);
+      } else {
+        setSummery(dataURL);
+      }
     } catch (error) {
       console.error(error);
     }
