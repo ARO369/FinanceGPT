@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# FinanceGPT ✨🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FinanceGPT is a feature-rich financial application built with React.js and Tailwind CSS, offering users a versatile platform to explore the stock market and stay informed. The application comprises three core features and additional enhancements for a seamless user experience.
 
-## Available Scripts
+![Home F](https://github.com/ARO369/FinanceGPT/assets/106620231/be7174f6-f1e6-412f-b8d5-4ae7ac4ff0ce)
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### 1. Stocks 📊🔍
+- View real-time stock data.
+- Search stocks by company names.
+- Click on stocks to access detailed information, including company details.
+- Utilizes a stock API for data retrieval.
+![Stocks F](https://github.com/ARO369/FinanceGPT/assets/106620231/426e23f8-6564-4a14-a693-712e3b371dd3)
+![Stock Detail F](https://github.com/ARO369/FinanceGPT/assets/106620231/609a261e-b700-44e7-a365-37daae07cb9a)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Stock News 🌐📈
+- Access the latest stock news.
+- Search for news articles.
+- Integration with a reliable news API for up-to-date market insights.
+![News F](https://github.com/ARO369/FinanceGPT/assets/106620231/2416494c-bd10-4e3b-a8c2-7fae471ae4f0)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 3. Ask GPT 💬💡
+- Integrated ChatGPT API to provide users with answers and insights into the stock market.
+- Users can learn about the stock market through interactive conversations.
+![Ask AI F](https://github.com/ARO369/FinanceGPT/assets/106620231/b6eec686-51e5-4673-9b2e-bd3cf64a7c18)
 
-### `npm test`
+### 4. Rapid Extract 🚀📑
+- Summarize the content of any blog by providing the URL.
+![Rapid Abstract F](https://github.com/ARO369/FinanceGPT/assets/106620231/d5a62f87-b243-4dbe-b7f3-6fc444751a60)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Additional Features
 
-### `npm run build`
+1. **Error Handling** 🚦
+   - Ensures a seamless user experience with robust error handling mechanisms.
+   - ![Error F](https://github.com/ARO369/FinanceGPT/assets/106620231/d6911009-94b9-4c94-8279-7c7042149a16)
+  
+2. **Glasomorphisom Cards** 🃏
+   - Stylish card design for an enhanced user interface.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Dark Mode** 🌙
+   - User-customizable dark mode for a modern and personalized experience.
+   - ![Light F](https://github.com/ARO369/FinanceGPT/assets/106620231/d03708a0-0c8d-41b6-8106-ff1aa4fd1d30)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Animation** 🎨
+   - Subtle animations to create a dynamic and engaging user interface.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- React.js
+- Tailwind CSS
+- Stock API (for Stocks feature)
+- News API (for Stock News feature)
+- ChatGPT API (for Ask GPT feature)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Run the application with `npm start`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Screenshot 2024-01-29 115356](https://github.com/ARO369/FinanceGPT/assets/106620231/69107718-031d-42a8-9337-eba36596ee5c)
+![Responsive F](https://github.com/ARO369/FinanceGPT/assets/106620231/cf918886-abb3-44e0-b2ba-31029adb8e0b)
